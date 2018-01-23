@@ -22,7 +22,9 @@ After cloning the project to your computer run the following command in your ter
 sudo npm install && yarn install || npm install && yarn install
 ```
 
-#Running Locally
+## Running Project
+
+###Development
 *You need terminal windows open*, one for client and the other for server.
 
 2. In terminal 1, run: `npm run dev`. This runs the development server(config-development-server).
