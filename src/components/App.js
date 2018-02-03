@@ -8,6 +8,7 @@ import VisibleTodoList from './VisibleTodoList';
 const App = () => (
   <div>
     <AddTodo />
+    <VisibleTodoList />
     <Footer />
   </div>
 );

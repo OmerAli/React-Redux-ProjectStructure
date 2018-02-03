@@ -4,18 +4,30 @@ import { Link } from 'react-router5';
 
 import PropTypes from 'prop-types';
 
-const FilterLink = ({ filter, children }) => (
-  <Link
-    routeName="home"
-    routeParams={filter === 'all' ? '/' : `/${filter}`}
-  >
-    {children}
-  </Link>
-);
+// const FilterLink = ({ filter, children }) => {
+//   console.log(filter === 'all');
+//   console.log(filter === 'all' ? '/' : `/${filter}`);
+// };
 
-  // <div>
-  //   <span>{filter}</span>
-  // </div>;
+const FilterLink = ({ filter, children }) => {
+  // console.log('123', {{ filter === 'completed' ? '/' : `/${filter}`}} );
+  console.log('Selected Filter: ', filter);
+
+
+  return (
+    <Link
+      routeName="show"
+      routeParams={{ filter: '/' }}
+    >
+      {children}
+    </Link>
+  );
+};
+
+
+// <div>
+//   <span>{filter}</span>
+// </div>;
 // <Link
 //   to={filter === 'all' ? '' : filter}
 //   activeStyle={{

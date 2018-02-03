@@ -1,15 +1,11 @@
 import { v4 } from 'node-uuid';
 
 // actionsCreators
-export const addTodo = (text) => {
-  console.log('Add Todo action', { text });
-
-  return ({
-    type: 'ADD_TODO',
-    id: v4(),
-    text
-  });
-};
+export const addTodo = text => ({
+  type: 'ADD_TODO',
+  id: v4(),
+  text
+});
 
 // export const setVisiblityFilter = filter => ({
 //   type: 'SET_VISIBLITY_FILTER',
@@ -22,6 +18,7 @@ export const toggleTodo = id => ({
 });
 
 const todo = (state, action) => {
+  console.log('action contain', action);
   switch (action.type) {
     case 'ADD_TODO':
       return {
@@ -45,6 +42,8 @@ const todo = (state, action) => {
 };
 
 const todos = (state = [], action) => {
+  console.log('action contain todos', action);
+
   switch (action.type) {
     case 'ADD_TODO':
       return [
